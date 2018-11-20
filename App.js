@@ -1,38 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import { Provider } from 'react-redux';
-import AppNavigatorWithState from './js/navigation/AppNavigatorWithState';
+import Navigator from './js/navigation/Router';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
-// const store = configureStore();
-// global.store = store;
-
-type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Provider >
-          <AppNavigatorWithState
-            ref={(nav) => {
-              this.navigator = nav;
-            }}
-          />
-        </Provider>
+        <Navigator />
       </View>
     );
   }
