@@ -36,7 +36,7 @@ class HomeScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={() => alert('this.props.navigation.navigate(SingleGameScreen)')}>
+        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SingleGameScreen')}>
           <Text>单人游戏</Text>
         </TouchableOpacity>
       </View>

@@ -4,11 +4,11 @@ import Home from '../screen/HomeScreen';
 import SingleGameScreen from '../screen/SingleGameScreen';
 
 
-const Navigation = createStackNavigator({
+const AppNavigator = createStackNavigator({
   Home: { screen: Home },
   SingleGameScreen: {
     screen: SingleGameScreen
   },
 });
 
-export default Navigation;
+export default AppNavigator;
